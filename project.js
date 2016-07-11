@@ -10,9 +10,6 @@ function Dec()
     counter-=1;
     return counter;
 }
-var inheritsFrom = function (child, parent) {
-    child.prototype = Object.create(parent.prototype);
-};
 
 
 var Base = function(id,state,name, email){
@@ -47,7 +44,8 @@ var Student = function(id,state,name, email, course){
     this.email=email;
     this.course=course;
 }
-inheritsFrom(Student, Base);
+Student.prototype = Object.create(Base.prototype);
+
 
 Student.prototype.validate = function() {
     if(Base.prototype.validate.call(this)){
@@ -68,7 +66,7 @@ var Admin = function(id,state,name,email,dept){
     this.email=email;
     this.dept = dept;
 }
-inheritsFrom(Admin, Base);
+Admin.prototype = Object.create(Base.prototype);
 
 
 Admin.prototype.validate = function() {
@@ -133,6 +131,8 @@ $('#add1').click(function()
             var del = document.createElement('input');       
             del.type = "button";
             del.value = "Delete";
+            //var  btn= $('<input type="button" value="EDIT"></button>');
+            //var del=$('<input type="button" value="DELETE"> </button>');
 
             var s = new Student(id,state,name,email,course);
             if(s.validate()){
@@ -147,8 +147,6 @@ $('#add1').click(function()
                 $('#tab1 tr:eq('+updateIndex+')').find('td:eq(0)').innerHTML = $("#student").find('input')[0].value;
                 $('#tab1 tr:eq('+updateIndex+')').find('td:eq(1)').innerHTML = $("#student").find('input')[1].value;
                 $('#tab1 tr:eq('+updateIndex+')').find('td:eq(2)').innerHTML = $("#student").find('input')[2].value;
-                
-
                 }
 
             btn.onclick = function(){
