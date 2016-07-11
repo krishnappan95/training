@@ -1,0 +1,66 @@
+<html>
+
+ <script src = "jquery.js"></script>
+<script src='handlebar.js'></script>
+<script src="template.js"> </script> 
+<script id='table-template' type="text/x-handlebars-template">
+ 	<table>
+      <tr>
+      <td>{{name}}</td>
+      <td>{{age}}</td>
+      <td>{{third}}</td>
+      <td><button>{{option1}}</button></td>
+      <td><button>{{option2}}</button></td>
+      </tr>
+      </table>
+ </script>     
+  
+<script id="form-template" type='text/x-handlebars-template'>
+	<form class=form1>
+	{{name}}
+      <input type="text" id={{name}}>
+      <br>
+    {{age}}
+      <input type="number" id={{age}}><br>
+    {{third}}
+      <input type="text" id={{third}} >
+    <br>
+    </div>
+      <hr>
+      <button id={{fun1}}>{{fun1}}</button>
+      &nbsp;
+       <button id={{fun2}} disabled="true">{{fun2}}</button>
+      <br><br>
+      </form>
+      <hr>
+      <table class="tab1">
+      <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>{{third}}</th>
+      <th>Options</th>
+      </tr>
+      </table>
+</script>
+
+<head>
+      <title>Details form</title>
+      
+      <style>
+	   table, th, td ,tr{
+      		border: 1px solid black;
+			}
+		</style>
+</head>
+<body>
+   	<select id="choice" onChange="makechoice();">
+        <option value="1">Student</option>
+        <option value="2">Admin</option>
+   </select>
+    <div class="formplace"></div>
+    <div class="tableplace">
+    	
+    </div>
+ </body> 
+ 
+ </html>

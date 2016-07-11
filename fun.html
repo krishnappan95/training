@@ -1,0 +1,78 @@
+<html>
+
+ <script src = "jquery.js"></script>
+<script src='handlebar.js'></script>
+<script src="main.js"> </script> 
+      
+   <head>
+      <title>Details form</title>
+      <style>
+table, th, td ,tr{
+    border: 1px solid black;
+}
+</style>
+   </head>
+   <body>
+   	<select id="choice" onChange="makechoice();">
+        <option value="1">Student</option>
+        <option value="2">Admin</option>
+    </select>
+  
+  <form id="student">    
+  <div class="stud">
+   Name:
+      <input type="text" name="name">
+      <br>
+    Age:
+      <input type="number" name="age"><br>
+    Course:
+      <input type="text"  name="course">
+    <br>
+    </div>
+      <hr>
+      <button id='insert1'>Insert</button>
+      &nbsp;
+       <button id='update1' disabled="true">Update</button>
+      <br><br>
+   </form>
+      <table id="studenttab">
+      <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Course</th>
+      </tr>
+
+      </table>
+
+  <form id="admin">
+  <div class="admin">    
+    Name:
+      <input type="text" name="name">
+      <br>
+    Age:
+      <input type="number" name="age"><br>
+    Dept:
+      <input type="text"  name="dept">
+    </div>
+    <br>
+
+      <hr><button id='insert2'>Insert</button>
+      &nbsp;
+      <button id='update2' disabled="true">Update</button>
+      
+      <br>
+      <br>
+      </form>
+      <table id="admintab">
+      <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+      </tr>
+
+      </table>
+
+    
+    
+   </body>
+<html>

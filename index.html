@@ -1,0 +1,89 @@
+<html>
+   
+   <head>
+      <title>Details </title>
+      
+      <script src="fun.js"> </script>
+      
+   </head>
+   
+   <body>
+      <form action="" name="myForm" onsubmit="return(validate());">
+         <table cellspacing="2" cellpadding="2" border="1">
+            
+            <tr>
+               <td align="right">First Name</td>
+               <td><input type="text" name="fname" /></td>
+            </tr>
+            <tr>
+               <td align="right">Middle Name</td>
+               <td><input type="text" name="mname" /></td>
+            </tr>
+            <tr>
+               <td align="right">Last Name</td>
+               <td><input type="text" name="lname" /></td>
+            </tr>
+           
+            <tr>
+               <td align="right">Password</td>
+               <td><input type="password" name="password" /></td>
+            </tr>
+            <tr>
+               <td align="right">Last Name</td>
+               <td><input type="text" name="Name" /></td>
+            </tr>
+
+            <tr>
+               <td align="right">email</td>
+               <td><input type="text" name="email" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">Zip Code</td>
+               <td><input type="text" name="Zip" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">Country</td>
+               <td>
+                  <select name="Country">
+                     <option value="-1" selected>[choose yours]</option>
+                     <option value="1">USA</option>
+                     <option value="2">UK</option>
+                     <option value="3">INDIA</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align="right"></td>
+               <td><input type="submit" value="Submit" /></td>
+            </tr>
+            
+         </table>
+      </form>
+      
+   </body>
+</html>
+
+ar student = function(name,age,email,course) {
+    this.name = name  ;
+    this.age = age;
+    this.email=email;
+    this.course=course;
+}
+
+var admin = function(name,age,email,dept) {
+    this.name = name;
+    this.age = age;
+    this.email=email;
+    this.dept=dept;
+}
+var a = new student("arun",15,"ARUN@gmail.com","cse");
+student.prototype.validation= function() {
+    console.log(this.name);
+    console.log(this.age);
+    console.log(this.email);
+    console.log(this.course);
+}
+a.validation();

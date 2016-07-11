@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script src = "jquery.js"></script>
+    <script src='handlebar.js'></script>
+    <script src="project.js"> </script>
+    <title>
+        Details
+    </title>
+</head>
+<script id='button-template' type='text/x-handlebars-template'>
+        {{#each btn1}}
+        <button id='add'+f> Insert</button>
+        <button id='reset'+s> Reset</button>
+        <button id='update'+t disabled> Update</button>
+        <hr>
+        {{/each}}
+</script>
+<script id='form-template' type='text/x-handlebars-template'>
+    {{#each thing}}
+      {{name}}: <input type={{type}} id={{name}}>
+      <br>
+    {{/each}}
+</script>
+<body>
+    <select id='sel'>
+        <option value='1'> Student</option>
+        <option value='2'> Admin   </option>
+    </select><br><br>
+    <div id='studDiv'>
+    <form id='student'>
+        <div class="form-placeholder"> </div>
+        Course:<input type='text' id='course'></input>
+        <br>  
+    </form>
+    <!--<div class="button-placeholder"></div>-->
+    <button id='add1'> Insert</button>
+    <button id='update1' disabled> Update</button>
+        <hr>
+    <table id='tab1'>
+               <tr> <th> Name</th>
+                <th> Email </th>
+                <th>  Course </th>
+                <th> Options</th>
+           </tr>
+    </table>
+   </div>
+    <div id=adminDiv>
+    <form id='Admin'>
+        <div class="form-placeholder"> </div>
+        Department:<input type='text' id='dept'></input><br>
+        </form>
+<!--<div class="button-placeholder"></div>-->
+    <button id='add2'> Insert</button>
+        
+        <button id='update2' disabled> Update</button>
+        <hr>
+        <table id='tab2'>
+                <tr><th> Name</th>
+                <th> Email </th>
+                <th> Department </th>
+                <th> Options</th>
+                </tr>
+        </table>
+    </div>
+</body>
+</html>
